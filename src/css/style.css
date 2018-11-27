@@ -1,0 +1,111 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  padding: 1rem;
+  background-color: #D32323;
+  background-image: url('../assets/bg_stars.png');
+  background-repeat: space;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+#reels {
+  display: flex;
+  width: 100vw;
+  height: calc((3 / 5) * 100vw);
+  max-height: calc(90vh - 70px);
+  max-width: calc((5 / 3) * (90vh - 50px));
+}
+
+.reel {
+  overflow: hidden;
+  width: 20%;
+  height: 100%;
+  border: 5px solid black;
+}
+
+.reel > .icons {
+    //height: inherit;
+}
+
+.reel > .icons > img {
+  width: calc(100% + 6px);
+  width: 100%;
+  height: auto;
+}
+
+#payouts {
+    height: 40px;
+    text-align: right;
+}
+
+#controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 30px;
+}
+
+#controls label {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+#controls label input {
+  margin-right: 5px;
+}
+
+#controls div.credits {
+    font-size: 40px;
+}
+
+#controls div.counter {
+    border-radius: 25px;
+    border: 5px black solid;
+    min-width: 300px;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+input[type="checkbox"] {
+  width: 40px;
+  height: 40px;
+}
+
+#jackpot {
+  color: #D5AD6D;
+  font-size: 40px;
+  text-align: center;
+}
+
+#slot.inverted .reel {
+  transform: scaleY(-1);
+}
+
+#slot.inverted .reel > .icons > img {
+  transform: scaleY(-1);
+}
+
+@keyframes blink-animation {
+	0% {opacity: 0}
+	49%{opacity: 0}
+	50% {opacity: 1}
+}
+
+#payouts {
+    margin-top: 10px;
+    color: white;
+    font-size: 25px;
+}
+
+.credit-label {
+    margin-top: 5px;
+}
+
+.blinker {
+  animation: blink-animation 1s infinite;
+}
